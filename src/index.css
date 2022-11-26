@@ -9,6 +9,9 @@ a {
   color: inherit;
   text-decoration: none;
 }
+body {
+  background-color: #2b303c;
+}
 
 /* Full page  ------------------------------------*/
 #root {
@@ -16,7 +19,6 @@ a {
   flex-direction: column;
   justify-content: space-between;
   height: 100vh;
-  background-color: #2b303c;
 }
 
 /* header section ------------------------ */
@@ -55,27 +57,6 @@ header {
   padding-right: 10rem;
 }
 
-/* Button .................................. */
-.button {
-  display: inline-flex;
-  flex-shrink: 0;
-  user-select: none;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  border: none;
-  width: 9rem;
-  height: 4rem;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-  min-height: 4rem;
-  font-size: 1.25rem;
-}
-.button:hover,
-.button:active {
-  cursor: pointer;
-}
-
 .gobutton {
   color: #a6adba;
   background-color: #191d24;
@@ -97,6 +78,77 @@ header {
 
 .clearbutton:hover {
   background-color: #434955;
+}
+
+/* User List ------------------------------------------- */
+
+.userslist {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem;
+}
+
+/* User Item ---------------------------------------------*/
+.useritem {
+  display: flex;
+  flex-direction: row;
+  flex: 1 1 auto;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.useritem > .user_id > p {
+  color: #a7adbb;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 400;
+}
+.useritem > .user_id > a {
+  color: #5d626f;
+  font-size: small;
+}
+
+.user_image {
+  display: block;
+  overflow: hidden;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 99999px;
+}
+.user_image > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+/* UI......................................... */
+
+/* Card --------------------------------- */
+.card {
+  border: #2a2f3b;
+  border-radius: 1rem;
+  background-color: #2b303c;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+/* Button .................................. */
+.button {
+  display: inline-flex;
+  flex-shrink: 0;
+  user-select: none;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  width: 9rem;
+  height: 4rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  min-height: 4rem;
+  font-size: 1.25rem;
+}
+.button:hover,
+.button:active {
+  cursor: pointer;
 }
 
 /* Not found page -------------------------------------- */
@@ -169,4 +221,40 @@ footer {
   color: #fff;
   text-align: center;
   padding: 1rem;
+}
+
+@media only screen and (min-width: 992px) {
+  .userslist {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 2rem;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .userslist {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 2rem;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+  .userslist {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .userslist {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 2rem;
+  }
+  .search {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 2fr));
+  }
 }

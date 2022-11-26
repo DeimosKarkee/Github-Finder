@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useContext } from "react";
 import { GithubContext } from "../../contex/githubcontext/GithubContex";
+import Button from "../UI/Button";
 
 function UserSearch() {
   const [text, setText] = useState("");
@@ -26,10 +27,10 @@ function UserSearch() {
           value={text}
           onChange={(e) => setText(e.target.value)}
         />
-        <button className="button gobutton">GO</button>
+        <Button className="gobutton">GO</Button>
         {users.length > 0 && (
           <div>
-            <button className="button clearbutton">CLEAR</button>
+            <Button className="clearbutton">CLEAR</Button>
           </div>
         )}
       </div>
