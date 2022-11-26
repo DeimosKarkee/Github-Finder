@@ -5,7 +5,7 @@ import Button from "../UI/Button";
 
 function UserSearch() {
   const [text, setText] = useState("");
-  const { users, getUsers } = useContext(GithubContext);
+  const { users, getUsers, clearUsers } = useContext(GithubContext);
 
   const submitHandler = (e) => {
     e.preventDefault();
@@ -30,7 +30,9 @@ function UserSearch() {
         <Button className="gobutton">GO</Button>
         {users.length > 0 && (
           <div>
-            <Button className="clearbutton">CLEAR</Button>
+            <Button className="clearbutton" onClick={clearUsers}>
+              CLEAR
+            </Button>
           </div>
         )}
       </div>
