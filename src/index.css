@@ -37,6 +37,68 @@ header {
   font-size: medium;
 }
 
+/* Home page......................................... */
+/* User search ------------------------------------ */
+.search {
+  display: grid;
+  grid-template-columns: 2fr 0.5fr 0.5fr;
+  background-color: #2b303c;
+  align-items: center;
+  margin: 3rem;
+}
+
+.search .search-bar {
+  border-radius: 12px 0 0 12px;
+  height: 4rem;
+  padding-left: 1.5rem;
+  line-height: 2;
+  padding-right: 10rem;
+}
+
+/* Button .................................. */
+.button {
+  display: inline-flex;
+  flex-shrink: 0;
+  user-select: none;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  width: 9rem;
+  height: 4rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  min-height: 4rem;
+  font-size: 1.25rem;
+}
+.button:hover,
+.button:active {
+  cursor: pointer;
+}
+
+.gobutton {
+  color: #a6adba;
+  background-color: #191d24;
+  border-radius: 0 12px 12px 0;
+  font-weight: 500;
+}
+.gobutton:hover {
+  background-color: #111318;
+}
+
+.clearbutton {
+  border-width: 1px;
+  border-color: transparent;
+  background-color: transparent;
+  color: currentColor;
+  border-radius: 0.5rem;
+  color: #a7adbb;
+}
+
+.clearbutton:hover {
+  background-color: #434955;
+}
+
 /* Not found page -------------------------------------- */
 .not-found {
   background-color: #2b303c;

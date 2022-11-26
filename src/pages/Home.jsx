@@ -1,7 +1,14 @@
 import React from "react";
+import UserSearch from "../components/users/UserSearch";
+import UsersList from "../components/users/UsersList";
 
 function Home() {
-  return <div>Home</div>;
+  return (
+    <>
+      <UserSearch />
+      <UsersList />
+    </>
+  );
 }
 
 export default Home;
